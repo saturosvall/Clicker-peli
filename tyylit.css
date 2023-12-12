@@ -1,0 +1,71 @@
+body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 800px;
+    margin-left: auto;
+}
+* {
+  box-sizing: border-box; 
+}
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+.column {
+    float: left;
+    padding: 10px;
+}
+    
+    /* Left and right column */
+.column.side {
+    width: 25%;
+    }
+    
+    /* Middle column */
+.column.middle {
+    width: 50%;
+    text-align: center;
+    }
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
+#tok, #klik {
+    color: rgb(255, 255, 255); 
+    font-size: 14px; 
+    line-height: 14px; 
+    padding: 8px; 
+    border-radius: 8px; 
+    font-family: Georgia, serif; 
+    font-weight: normal; 
+    text-decoration: none; 
+    font-style: normal; 
+    font-variant: normal; 
+    text-transform: none; 
+    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
+    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+    border: 2px solid rgb(28, 110, 164); 
+    display: inline-block;}
+    .myButton:hover {
+    background: #1C6EA4; }
+    .myButton:active {
+    background: #144E75; }
+img {
+    width: 50%;
+}
+
+
+
+/* for smaller screens (eg: phones) */
+@media (max-width: 800px) { 
+    .item {
+      flex: 100%; /* makes one item on each line */
+    }
+    .column.side, .column.middle {
+        width: 100%;
+  }
+}

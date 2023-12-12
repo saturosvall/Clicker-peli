@@ -7,7 +7,44 @@
     <title>Clicker-peli</title>
 </head>
 <body>
+    <div class="header">
+        <h1>Clicker-peli</h1>
+        <p>Klikkaa kuva-arvoitus esiin</p>
+      </div>
     
+      <div class="row">
+        <div class="column side">
+          <h2>Kokeile kellon kanssa tai ilman</h2>
+          <p>Kokeile kilpajuoksua 10 sekunnin ajan.</p>
+        <form  id="aloita">
+        <button>Käynnistä kello</button>
+        </form>
+        <span id="timer">
+          <span id="time">10 sekuntia</span>    
+        </span>
+      </div>
+
+    <div class="column middle">
+        <h2>Ehditkö klikkailla kuvan esiin?</h2>
+    <img id="kuva" src="img/pic.jpg">
+    </div>
+    
+    <div class="column side">
+        <h2>Kumpi on kannattavampi nappi?</h2>
+    <form  id="klik">
+    <button>Klikkaa tätä</button>
+    </form>
+    <form  id="tok">
+    <button>Tökkää tätä</button>
+    </form>
+    
+    <p id="klikkaukset">Klikkausten määrä:</p>
+    <p id="tokkaykset">Tökkäysten määrä:</p>
+    <form  id="nollaus">
+        <button>Nollaa kaikki</button>
+        </form>
+    </div>
+      </div>
 </body>
 <script src="main.js"></script>
 
