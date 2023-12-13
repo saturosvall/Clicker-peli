@@ -1,28 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
 body {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    max-width: 800px;
-    margin-left: auto;
+    font-family: 'Afacad', sans-serif;
+    letter-spacing: 1px;
+    background-color:#164863;  
 }
 * {
   box-sizing: border-box; 
 }
 
+.row {
+    padding: 1em;
+    background: #DDF2FD;
+    margin: 2rem auto 0 auto;
+    max-width: 800px;
+    padding: 1em;
+}
 .header {
-    background-color: #f1f1f1;
+    background-color:#9BBEC8;
     padding: 20px;
     text-align: center;
+
 }
 .column {
     float: left;
     padding: 10px;
 }
-    
-    /* Left and right column */
+
 .column.side {
     width: 25%;
-    }
+    padding-bottom: 10px;
+}
+
+div#time {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
     
-    /* Middle column */
 .column.middle {
     width: 50%;
     text-align: center;
@@ -33,37 +46,41 @@ body {
     display: table;
     clear: both;
     }
+#btnclock {
+    background-color: #DDF2FD;
+    padding: 15px 32px;
+    color: black;
+    border: 1px solid #555555;
+    width: 100%
+    font-family: 'Afacad';
+    font-size: large ;
+    }
 
-#tok, #klik {
-    color: rgb(255, 255, 255); 
-    font-size: 14px; 
-    line-height: 14px; 
-    padding: 8px; 
-    border-radius: 8px; 
-    font-family: Georgia, serif; 
-    font-weight: normal; 
-    text-decoration: none; 
-    font-style: normal; 
-    font-variant: normal; 
-    text-transform: none; 
-    background-image: linear-gradient(to right, rgb(28, 110, 164) 0%, rgb(35, 136, 203) 50%, rgb(20, 78, 117) 100%); 
-    box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
-    border: 2px solid rgb(28, 110, 164); 
-    display: inline-block;}
-    .myButton:hover {
-    background: #1C6EA4; }
-    .myButton:active {
-    background: #144E75; }
+#btnclock:hover {
+    background-color: #164863;
+    color: #DDF2FD;
+    }
+#btn {
+        background-color: #164863;
+        padding: 15px 32px;
+        color: rgb(243, 240, 240);
+        border: 1px solid black;
+        size: 20px;
+        font-family: 'Afacad';
+        font-size: large ;
+      }
+      
+#btn:hover {
+        background-color: #9BBEC8;
+        color: white;
+      }
 img {
-    width: 50%;
+    width: 80%;
 }
 
-
-
-/* for smaller screens (eg: phones) */
 @media (max-width: 800px) { 
     .item {
-      flex: 100%; /* makes one item on each line */
+      flex: 100%; 
     }
     .column.side, .column.middle {
         width: 100%;

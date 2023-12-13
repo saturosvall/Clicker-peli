@@ -1,34 +1,38 @@
+// Tapahtumankäsittelijät
 document.getElementById('klik').addEventListener('submit', lisaaKlikkaus);
 document.getElementById('tok').addEventListener('submit', lisaaTokkays);
 document.getElementById('nollaus').addEventListener('submit', nollaaKaikki);
 document.getElementById('aloita').addEventListener('submit', start);
 
-
-//document.getElementById('kuva').addEventListener('submit', piirraKuva);
+// Ajanottofunktio
 function start(event) {
     event.preventDefault()
     var timeleft = 10;
         var downloadTimer = setInterval(function(){
         timeleft--;
-        document.getElementById("time").textContent = timeleft == 0 ? 'Aika loppui' : timeleft+' sekuntia';
+        document.getElementById("time").textContent = timeleft == 0 ? 'Aika loppui!' : timeleft+' sekuntia';
         if(timeleft === 0)
             clearInterval(downloadTimer);
             nollaaKaikki();
         },1000);
 }
 
+// Määritellään klikkaukset
 let clicks = 0;
 let tocks = 0;
 
+// Klikkauksen funktio
 function lisaaKlikkaus(event) {
-    //console.log('klikkasit');
     event.preventDefault()
     clicks ++;
     document.getElementById("klikkaukset").innerHTML = "Klikkausten määrä: " + clicks;
+    if(clicks > 5 ) {
+        piirraKuva0();
+    }
 }
 
+// Tökkäyksen funktio
 function lisaaTokkays(event) {
-    //console.log('klikkasit');
     event.preventDefault()
     tocks ++;
     document.getElementById("tokkaykset").innerHTML = "Tökkäysten määrä: " + tocks;
@@ -44,41 +48,41 @@ function lisaaTokkays(event) {
     }
     }
 
-
-
+// Nollausfunktio
 function nollaaKaikki(event) {
-    //console.log('klikkasit');
     event.preventDefault()
     tocks = 0;
     clicks = 0;
     const kuva = document.getElementById('kuva');
     kuva.src = "img/pic.jpg";
-
-
     document.getElementById("klikkaukset").innerHTML = "Klikkausten määrä: " + clicks;
     document.getElementById("tokkaykset").innerHTML = "Tökkäysten määrä: " + tocks;
 }
 
+// Funktiot kuvien hahmottumiselle
+function piirraKuva0() {
+    const kuva = document.getElementById('kuva');
+    tocks = 0;
+    document.getElementById("tokkaykset").innerHTML = "Tökkäysten määrä: " + tocks;
+    kuva.src = "img/pic.jpg";
+}
+
 function piirraKuva() {
-    console.log("yli rajapyykin")
     const kuva = document.getElementById('kuva');
     kuva.src = "img/pic1.jpg";
 }
 
 function piirraKuva2() {
-    console.log("yli rajapyykin")
     const kuva = document.getElementById('kuva');
     kuva.src = "img/pic2.jpg";
 }
 
 function piirraKuva3() {
-    console.log("yli rajapyykin")
     const kuva = document.getElementById('kuva');
     kuva.src = "img/pic3.jpg";
 }
 
 function piirraKuva4() {
-    console.log("yli rajapyykin")
     const kuva = document.getElementById('kuva');
     kuva.src = "img/pic4.jpg";
 }
